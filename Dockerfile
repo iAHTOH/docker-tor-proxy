@@ -12,3 +12,9 @@ ENV OBFS4_ADR="obfs4 207.148.108.221:443 7259F29EC35E385B25D1DD56A3B39B76BBE6394
 EXPOSE 8888
 
 CMD ["/bin/sh", "/opt/start.sh"]
+
+# https://github.com/opencontainers/image-spec/blob/v1.0.1/annotations.md
+ARG REVISION=
+LABEL org.opencontainers.image.title="tor bridge providing obfs4 obfuscation protocol with squid" \
+    org.opencontainers.image.source="https://github.com/iAHTOH/ docker-tor-proxy" \
+    org.opencontainers.image.revision="$REVISION"
