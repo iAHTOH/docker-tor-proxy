@@ -1,7 +1,7 @@
 FROM alpine:edge
 
 ARG OBFS4PROXY_PACKAGE_VERSION=0.0.11-r4
-RUN apk --no-cache add squid tor privoxy ca-certificates && \
+RUN apk --no-cache add squid tor privoxy ca-certificates \
     && apk add --no-cache obfs4proxy=$OBFS4PROXY_PACKAGE_VERSION \
         --repository http://dl-cdn.alpinelinux.org/alpine/edge/testing \
     ln -sf /dev/stdout /var/log/privoxy/logfile && \
