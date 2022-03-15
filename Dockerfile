@@ -1,6 +1,7 @@
 FROM alpine:edge
 
-RUN apk --no-cache add squid tor privoxy obfs4proxy ca-certificates && \
+RUN apk --no-cache add squid tor privoxy ca-certificates && \
+    && apk add --no-cache obfs4proxy --repository http://dl-cdn.alpinelinux.org/alpine/edge/testing \
     ln -sf /dev/stdout /var/log/privoxy/logfile && \
     chown -R squid:squid /var/cache/squid && \
     chown -R squid:squid /var/log/squid
