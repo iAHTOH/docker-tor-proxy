@@ -5,7 +5,7 @@ A docker image with Tor and Privoxy based on Alpine Linux. Now it has Squid as w
 It changes IP address in every minutes by default. If you want to change this behaviour, you can specify the IP_CHANGE_INTERVAL environment variable.
 
 ```
-docker run -d -e IP_CHANGE_INTERVAL=120 -p 8888:8888 -p pickapp/tor-proxy
+docker run -d -e IP_CHANGE_INTERVAL=120 -p 8888:8888 iahtoh/tor-proxy
 curl --proxy localhost:8888 http://ipecho.net/
 ```
 
@@ -15,7 +15,7 @@ And that's it!
 
 You can change squid settings by mount a custom.conf into /opt/squid/custom.conf:
 ```
-docker run -d -e IP_CHANGE_INTERVAL=120 -v $PWD/custom.conf:/opt/squid/custom.conf -p 8888:8888 -p pickapp/tor-proxy
+docker run -d -e IP_CHANGE_INTERVAL=120 -v $PWD/custom.conf:/opt/squid/custom.conf -p 8888:8888  iahtoh/tor-proxy
 ```
 
 The image has an URL rewrite script to be able to modify request URLs. You can configure it by mounting a file into /opt/squid/rewriter.conf like this:
