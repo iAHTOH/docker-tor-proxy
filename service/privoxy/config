@@ -1,4 +1,4 @@
-listen-address 127.0.0.1:8118
+listen-address 0.0.0.0:8118
 forward-socks5t / localhost:9050 .
 templdir /etc/privoxy/templates
 logdir /var/log/privoxy
@@ -11,7 +11,7 @@ socket-timeout 30
 #debug     2 # show each connection status
 #debug     4 # show I/O status
 #debug     8 # show header parsing
-#debug    16 # log all data written to the network
+debug    16 # log all data written to the network
 #debug    32 # debug force feature
 #debug    64 # debug regular expression filters
 #debug   128 # debug redirects
