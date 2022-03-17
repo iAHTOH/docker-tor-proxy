@@ -1,4 +1,4 @@
-# docker-tor-proxy
+# docker-tor-ps
 
 A docker image with Tor and Privoxy based on Alpine Linux. Now it has Squid as well for caching and midifying requests.
 
